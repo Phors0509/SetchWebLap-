@@ -1,25 +1,30 @@
-const studentID = 12345;
+const studentID = 1;
 const studentName = "So Phorn";
 const studentGender = "Male";
 const sutdentSubject = "Web Development";
 const studentPayment = 1000;
 
-const studentInfo = `
-    <p>1. My personal studentId : ${studentID}</p>
-    <p>2. My personal studentName : ${studentName}</p>
-    <p>3. My personal studentGender : ${studentGender}</p>
-    <p>4. My personal studentSubject : ${sutdentSubject}</p>
-    <p>5. My personal studentPayment : ${studentPayment}</p>
-`;
+const studentFormated = studentID.toString().padStart(3, "0");
+
+const studentDetails = [
+    { label: "My personal studentId", value: studentFormated },
+    { label: "My personal studentName", value: studentName },
+    { label: "My personal studentGender", value: studentGender },
+    { label: "My personal studentSubject", value: sutdentSubject },
+    { label: "My personal studentPayment", value: studentPayment },
+];
+
+let studentInfo = "";
+studentDetails.forEach((detail, index) => {
+    studentInfo += `<p>${index + 1}. ${detail.label} : ${detail.value}</p>`;
+});
 
 document.getElementById("studentInfo").innerHTML = studentInfo;
 
-console.log(`1. My personal studentId : ${studentID}`);
-console.log(`2. My personal studentName : ${studentName}`);
-console.log(`3. My personal studentGender : ${studentGender}`);
-console.log(`4. My personal studentSubject : ${sutdentSubject}`);
-console.log(`5. My personal studentPayment : ${studentPayment}`);
+studentDetails.forEach((detail, index) => {
+    console.log(`${index + 1}. ${detail.label} : ${detail.value}`);
+});
 
 alert(
-    `1. My personal studentId : ${studentID}\n2. My personal studentName : ${studentName}\n3. My personal studentGender : ${studentGender}\n4. My personal studentSubject : ${sutdentSubject}\n5. My personal studentPayment : ${studentPayment}`
+    `1. My personal studentId : ${studentFormated}\n2. My personal studentName : ${studentName}\n3. My personal studentGender : ${studentGender}\n4. My personal studentSubject : ${sutdentSubject}\n5. My personal studentPayment : ${studentPayment}`
 );
