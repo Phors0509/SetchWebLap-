@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow - Transform Your Workflow</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Landing Page -->
+        <div id="landing-page">
+            <nav>
+                <div class="logo">TechFlow</div>
+                <div class="nav-links">
+                    <button onclick="showLogin()">Login</button>
+                    <button onclick="showRegister()" class="btn-primary">Sign Up</button>
+                </div>
+            </nav>
+
+            <header>
+                <h1>Transform Your Workflow with <span>TechFlow</span></h1>
+                <p>Streamline your business operations and boost productivity with our innovative platform.</p>
+                <button onclick="showRegister()" class="btn-primary">Get Started</button>
+            </header>
+
+            <section class="features">
+                <div class="feature">
+                    <div class="icon">🛡️</div>
+                    <h3>Secure Platform</h3>
+                    <p>Enterprise-grade security to protect your valuable data</p>
+                </div>
+                <div class="feature">
+                    <div class="icon">🔄</div>
+                    <h3>Easy Integration</h3>
+                    <p>Seamlessly integrate with your existing tools and workflows</p>
+                </div>
+                <div class="feature">
+                    <div class="icon">🚀</div>
+                    <h3>Boost Productivity</h3>
+                    <p>Automate tasks and focus on what matters most</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-page" class="auth-page hidden">
+            <div class="auth-container">
+                <button onclick="showLanding()" class="back-btn">← Back</button>
+                <h2>Sign in to your account</h2>
+                <form id="login-form" onsubmit="handleLogin(event)">
+                    <div class="error-message" id="login-error"></div>
+                    <div class="form-group">
+                        <label for="login-email">Email address</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Sign in</button>
+                </form>
+                <p class="auth-switch">
+                    Don't have an account? 
+                    <a href="#" onclick="showRegister()">Sign up</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Register Form -->
+        <div id="register-page" class="auth-page hidden">
+            <div class="auth-container">
+                <button onclick="showLanding()" class="back-btn">← Back</button>
+                <h2>Create your account</h2>
+                <form id="register-form" onsubmit="handleRegister(event)">
+                    <div class="error-message" id="register-error"></div>
+                    <div class="form-group">
+                        <label for="register-email">Email address</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Create account</button>
+                </form>
+                <p class="auth-switch">
+                    Already have an account? 
+                    <a href="#" onclick="showLogin()">Sign in</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard-page" class="hidden">
+            <nav class="dashboard-nav">
+                <div class="logo">Dashboard</div>
+                <div class="user-info">
+                    <span id="user-email"></span>
+                    <button onclick="handleLogout()" class="btn-primary">Logout</button>
+                </div>
+            </nav>
+            <main class="dashboard-content">
+                <div class="welcome-box">
+                    <h2>Welcome to your Dashboard</h2>
+                    <p>You're logged in as <span id="dashboard-email"></span></p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

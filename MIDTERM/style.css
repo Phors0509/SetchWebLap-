@@ -1,0 +1,246 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Button styles */
+button {
+    cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+    padding: 12px 24px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Landing page */
+#landing-page {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #eff6ff, white);
+}
+
+header {
+    text-align: center;
+    padding: 4rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+}
+
+header h1 span {
+    color: #2563eb;
+}
+
+header p {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+}
+
+/* Features section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature {
+    text-align: center;
+    padding: 2rem;
+}
+
+.feature .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.feature p {
+    color: #64748b;
+}
+
+/* Auth pages */
+.auth-page {
+    min-height: 100vh;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.auth-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.back-btn {
+    background: none;
+    color: #2563eb;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.auth-container h2 {
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+    font-size: 0.875rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.error-message {
+    color: #dc2626;
+    background: #fee2e2;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #6b7280;
+}
+
+.auth-switch a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+/* Dashboard */
+.dashboard-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dashboard-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.welcome-box {
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    padding: 3rem;
+    text-align: center;
+}
+
+.welcome-box h2 {
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-box p {
+    color: #64748b;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-container {
+        padding: 1.5rem;
+    }
+}
