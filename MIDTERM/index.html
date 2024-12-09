@@ -4,6 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechFlow - Transform Your Workflow</title>
+    <link
+    rel="stylesheet"
+    data-purpose="Layout StyleSheet"
+    title="Web Awesome"
+    href="/css/app-wa-4605c815f1874757bc9ac33aa114fb0f.css?vsn=d"
+  >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/all.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/sharp-duotone-thin.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/sharp-duotone-solid.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/sharp-duotone-regular.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/sharp-duotone-light.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/sharp-thin.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/sharp-solid.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/sharp-regular.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/sharp-light.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/duotone-thin.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/duotone-regular.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/duotone-light.css"
+    >
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -52,12 +118,19 @@
                     <div class="error-message" id="login-error"></div>
                     <div class="form-group">
                         <label for="login-email">Email address</label>
-                        <input type="email" id="login-email" required>
+                        <div class="" style="position: relative;">
+                            <input type="email" id="login-email" required>
+                            <span style="position: absolute; right: 0; top: 10px; margin-right: 10px;"><i class="fa-duotone fa-solid fa-user"></i></span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="login-password">Password</label>
-                        <input type="password" id="login-password" required>
+                        <div class="" style="position: relative;">
+                            <input type="password"  id="login-password" required>
+                            <span style="position: absolute; right: 0; top: 10px; margin-right: 10px;"><i class="fa-duotone fa-solid fa-lock"></i></span>
+                        </div>
                     </div>
+                    
                     <button type="submit" class="btn-primary">Sign in</button>
                 </form>
                 <p class="auth-switch">
@@ -75,12 +148,18 @@
                 <form id="register-form" onsubmit="handleRegister(event)">
                     <div class="error-message" id="register-error"></div>
                     <div class="form-group">
-                        <label for="register-email">Email address</label>
-                        <input type="email" id="register-email" required>
+                        <label for="login-email">Email address</label>
+                        <div class="" style="position: relative;">
+                            <input type="email" id="login-email" required>
+                            <span style="position: absolute; right: 0; top: 10px; margin-right: 10px;"><i class="fa-duotone fa-solid fa-user"></i></span>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="register-password">Password</label>
-                        <input type="password" id="register-password" required>
+                        <label for="login-password">Password</label>
+                        <div class="" style="position: relative;">
+                            <input type="password"  id="login-password" required>
+                            <span style="position: absolute; right: 0; top: 10px; margin-right: 10px;"><i class="fa-duotone fa-solid fa-lock"></i></span>
+                        </div>
                     </div>
                     <button type="submit" class="btn-primary">Create account</button>
                 </form>
